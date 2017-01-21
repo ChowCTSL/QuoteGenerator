@@ -1,0 +1,35 @@
+html, body {
+	height: 100%;
+	background-color: rgb(0,0,0);
+	transition: background-color 1.5s ease-in-out;
+	-o-transition: background-color 1.5s ease-in-out;
+	-ms-transition: background-color 1.5s ease-in-out;
+	-moz-transition: background-color 1.5s ease-in-out;
+	-webkit-transition: background-color 1.5s ease-in-out;
+}
+
+#quote {
+	height: 100%;
+	display: none;
+}
+
+#quote-body{
+	height: 100%;
+	font-family: "Open Sans",Helvetica,Arial,sans-serif;
+	color: #fff;
+	padding: 125px 125px 25px;
+	font-weight: 700;
+}
+
+.quote-text {
+	font-size: 32px;
+}
+
+.quote-author {
+	padding-top: 30px;
+	text-transform: uppercase;
+}
+
+.quotations {
+	padding-bottom: 10px;
+}
