@@ -1,11 +1,11 @@
 html, body {
 	height: 100%;
 	background-color: rgb(0,0,0);
-	transition: background-color 1.5s ease-in-out;
-	-o-transition: background-color 1.5s ease-in-out;
-	-ms-transition: background-color 1.5s ease-in-out;
-	-moz-transition: background-color 1.5s ease-in-out;
-	-webkit-transition: background-color 1.5s ease-in-out;
+	transition: background-color 1.2s ease-in-out;
+	-o-transition: background-color 1.2s ease-in-out;
+	-ms-transition: background-color 1.2s ease-in-out;
+	-moz-transition: background-color 1.2s ease-in-out;
+	-webkit-transition: background-color 1.2s ease-in-out;
 }
 
 #quote {
@@ -26,8 +26,9 @@ html, body {
 }
 
 .quote-author {
-	padding-top: 30px;
+	padding-top: 25px;
 	text-transform: uppercase;
+	font-size: 16px;
 }
 
 .quotations {
