@@ -2,7 +2,11 @@
 
 This project was made for Free Code Camp and consists of a simple random quote generator.
 
-This was made using HTML, CSS, Bootstrap, and jQuery.  It is a responsive website that is compatible with mobile.
+This was made using HTML, CSS, Bootstrap, and JS/jQuery.  It is a responsive website that is compatible with mobile.
+
+## Preview (Screenshots)
+![Quote1] (http://i.imgur.com/a/6SkBC.png)
+![Quote2] (http://i.imgur.com/qxCjnLw.png)
 
 ## Motivation
 
