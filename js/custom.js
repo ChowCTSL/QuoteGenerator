@@ -1,5 +1,6 @@
 function getQuote() {
 	//get a new quote
+	var author ="&mdash; ";
 	$.ajax({
 		url: "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?",
 		dataType: "jsonp",
@@ -8,14 +9,28 @@ function getQuote() {
 			$(".quote-text").text(data.quoteText);
 			//if no author make it unknown
 			if(data.quoteAuthor === "") {
-				$(".quote-author").html("&mdash; " + "Unknown");
+				author += "Unknown";
 			} else {
-				$(".quote-author").html("&mdash; " + data.quoteAuthor);
+				author += data.quoteAuthor;
 			}
+
+			$(".quote-author").html(author);
 			$("#quote").fadeIn(2200);
 		}
 	});
 }
+
+
+function tweetQuote(){
+
+        var quote = $(".quote-text").text();
+        var author = $(".quote-author").text();
+        
+        var tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(quote + " \n" + author);
+        
+        window.open(tweet, "_blank");    
+}
+
 
 function changeBgColor() {
 	//array of possible bg colors
@@ -42,7 +57,24 @@ $(document).ready(function() {
 	$("#new-quote-btn").on("click", function(e) {
 		e.preventDefault();
 		$("#quote").fadeOut(10);
-		
 		getQuote();
 	});
+
+	//on hover, make the button font color the same as background
+	$("#new-quote-btn, #twitter-btn").hover(function() {
+		$(this).css("color", $("html, body").css("background-color"));
+
+	}, function(){
+        // change to text color that was previously used.
+        $(this).css("color", "#fff");
+    });
+
+    $("#new-quote-btn, #twitter-btn").on("click", function() {
+		$(this).blur();
+    });
+
+    $("#twitter-btn").on("click", function(){
+    	tweetQuote();
+    });
+
 });
